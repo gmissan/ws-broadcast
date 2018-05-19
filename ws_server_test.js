@@ -18,14 +18,31 @@ wss.on('connection', function connection(ws) {
     // Broadcast to everyone else.
     
     if (data != "" && data != null) {
-    ws.send(token);
+    try {
+   json = JSON.parse(data);
+        
+     if (json['token'] == token) {
 
-    
     wss.clients.forEach(function each(client) {
       if (client !== ws && client.readyState === WebSocket.OPEN) {
-        client.send(data);
+        client.send(json['data']);
       }
     });
+
+
+} else {ws.send("token invalid");}
+
+
+        
+
+        }
+
+   catch(err) {
+    console.log(err);
+}
+
+    
+    
     
 
 
