@@ -18,6 +18,11 @@ wss.on('connection', function connection(ws) {
     // Broadcast to everyone else.
     
     if (data != "" && data != null) {
+      
+    if(data == "ping") {ws.send("pong"); return;  }
+
+
+
     try {
    json = JSON.parse(data);
         
