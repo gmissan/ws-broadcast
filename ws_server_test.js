@@ -1,5 +1,7 @@
 const WebSocket = require('ws');
 
+var token = process.env.token;
+
 const wss = new WebSocket.Server({ port: 8080 });
 
 // Broadcast to all.
@@ -14,10 +16,24 @@ wss.broadcast = function broadcast(data) {
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(data) {
     // Broadcast to everyone else.
+    
+    if (data != "" && data != null) {
+    ws.send(token);
+
+    
     wss.clients.forEach(function each(client) {
       if (client !== ws && client.readyState === WebSocket.OPEN) {
         client.send(data);
       }
     });
+    
+
+
+
+
+    }
+    
+
+
   });
 });
