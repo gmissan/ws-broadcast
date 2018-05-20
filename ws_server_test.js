@@ -13,7 +13,11 @@ wss.broadcast = function broadcast(data) {
   });
 };
 
-wss.on('connection', function connection(ws) {
+wss.on('connection', function connection(ws, req) {
+  
+ const ip = req.connection.remoteAddress;
+ console.log("La ip "+ip+" se conecto a las "+`${new Date()}`) ;
+  
   ws.on('message', function incoming(data) {
     // Broadcast to everyone else.
     
