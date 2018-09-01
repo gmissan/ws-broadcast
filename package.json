@@ -1,20 +1,22 @@
 {
-  "name": "ws-proy",
+  "name": "ws-broadcast",
   "version": "1.0.0",
   "description": "",
   "main": "ws_server_test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ws_server_test.js "
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "gmissan"
+    "url": "git+https://github.com/gmissan/ws-broadcast.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmissan/ws-broadcast/issues"
+  },
+  "homepage": "https://github.com/gmissan/ws-broadcast#readme",
   "dependencies": {
-    "ws": "^5.1.1",
-    "async-limiter": "1.0.0"
+    "ws": "^6.0.0"
   }
 }
