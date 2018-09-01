@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "lockfileVersion": 1,
   "requires": true,
+  "main": "ws_server_test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ws_server_test.js "
+  },
   "dependencies": {
     "async-limiter": {
       "version": "1.0.0",
