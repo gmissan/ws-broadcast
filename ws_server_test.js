@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 
 var token = process.env.token;
 console.log("el token es: "+token);
-const wss = new WebSocket.Server({ port: 80 });
+const wss = new WebSocket.Server({ port: 443 });
 
 // Broadcast to all.
 wss.broadcast = function broadcast(data) {
