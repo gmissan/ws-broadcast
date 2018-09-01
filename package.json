@@ -1,6 +1,9 @@
 {
   "name": "ws-broadcast",
   "version": "1.0.0",
+  "engines": {
+    "npm": "5.7.x"
+  },
   "description": "",
   "main": "ws_server_test.js",
   "scripts": {
